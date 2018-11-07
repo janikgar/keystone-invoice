@@ -1,3 +1,9 @@
+//UI Functions
+//
+//
+
+const TIMER = "timer";
+
 function onOpen() {
   SpreadsheetApp.getUi()
     .createAddonMenu()

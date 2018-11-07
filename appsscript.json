@@ -1,6 +1,13 @@
 {
-  "timeZone": "America/Mexico_City",
+  "timeZone": "America/Chicago",
   "dependencies": {
   },
-  "exceptionLogging": "STACKDRIVER"
+  "webapp": {
+    "access": "ANYONE",
+    "executeAs": "USER_ACCESSING"
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "executionApi": {
+    "access": "ANYONE"
+  }
 }

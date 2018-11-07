@@ -113,6 +113,17 @@ function finishAndAlert(newDoc) {
   return 0;
 }
 
+function setFileInfo() {
+  var fileId = DriveApp.getFileById(SpreadsheetApp.getActive().getId())
+  if (fileId.getParents().hasNext()) {
+    var folder = fileId.getParents().next();
+    return folder
+  } else {
+    SpreadsheetApp.getUi().alert("Error: It appears that you do not have read-write access to the folder containing this Spreadsheet. Contact your administrator to make sure you can read and write in this folder on Drive. If this error message keeps occuring, contact the plugin author at janikgar@gmail.com.", SpreadsheetApp.getUi().ButtonSet.OK);
+    return "1"
+  }
+}
+
 // Utility functions
 //
 //

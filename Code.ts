@@ -53,6 +53,17 @@ function onInvoice() {
       if (pairs[j][0] == '<<Keystone Number>>') {
         invoiceNumber = pairs[j][1];
       }
+      var policyClaimType, policy, claim, insured;
+      switch(pairs[0]) {
+        case "<<Reference Claim/Policy>>":
+          policyClaimType = pairs[1];
+        case "<<Policy Number>>":
+          policy = pairs[1];
+        case "<<Claim Number>>":
+          claim = pairs[1];
+        case "<<Insured>>":
+          insured = pairs[1];
+      }
       sheet_values[i] = new_values
     }
   }
